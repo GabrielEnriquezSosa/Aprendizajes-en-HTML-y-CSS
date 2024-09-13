@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio de Gabriel</title>
+    <!--etiqueta para poner una descripcion de la pagina donde se visualice en google-->
+
+    <meta
+      name="description"
+      content="Portafolio de Gabriel, Aprendiendo Paginas Web Completo Full Stack"
+    />
+
+    <!-- Ophen Graph -->
+    <meta
+      property="og:title"
+      content="Portafolio de un Principaiante Full Stack"
+    />
+    <meta
+      property="og:description"
+      content="Portafolio de Gabriel, Aprendiendo Paginas Web Completo Full Stack"
+    />
+    <meta property="og:image" content="/Images/Yo.jpg" />
+    <meta
+      property="og:image/alt"
+      content="Una fotografica de Gabriel Enriquez Sosa posando"
+    />
+
+    <!--link alternativo por si la pagina tiene una alternativa donde sea el mismo pero con otro idioma-->
+    <link
+      rel="alternate"
+      href="https://PortafolioGabi.com/en"
+      hreflang="es-MX"
+    />
+    <meta rel="canonical" href="https://PortafolioGabi.com" />
+
+    <!--etiqueta para seguir una pagina-->
+    <meta name="robots" content="index, follow" />
+    <!--etiqueta para cambiar el tema del navegador-->
+    <meta name="theme-color" content="#09f" />
+    <!--etiqueta para poner una imagen como icono en la pagina-->
+    <link rel="icon" type="Images/jpg" href="/Images/Yo.jpg" />
+
+    <style>
+      body {
+        background: #44e0ff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Portafolio de Gabriel</h1>
+      <nav>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <!--el target _blank realiza el envio a otra pagina sin tener que abandonar la principal siendo este abierto en otra pestaña y el rel=noreferrer este no comparte los datos a la pagina reedirigida-->
+        <a
+          href="https://www.instagram.com/gxbriel_es/"
+          target="_blank"
+          rel="noreferrer"
+          >Instagram</a
+        >
+      </nav>
+    </header>
+    <!-- sirve para poner otra pagina superponiendo este -->
+    <!-- <iframe style="width: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/3nYLTiY5skU?si=CFmFZi2pMvHfbxQd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+    <!--etiqueta de audio-->
+    <!-- <audio controls src="/Images/Symphony No.6 (1st movement).mp3"></audio> -->
+    <!--etiqueta de video-->
+    <!-- <video controls autoplay loop muted src="/Images/Programando_Printf_Hola_mundo.mp4"></video> -->
+    <!-- el main es el comienzo de la informacion que lo hace unica, naturalmente este esta en constante cambio cuando es mandado a otra dirrecion dentro de la pagina-->
+    
+    <!--modal-->
+    <dialog id="dialog">
+      <h1>Sabías que puedes abrir un modal así?</h1>
+      <p>¡Totalmente nativo y facil!</p>
+      <button id="hide">Cerrar Modal</button>
+    </dialog>
+
+    <button id="show">abrir modal</button>
+    
+    <!--script que ejecuta o abre el modal con el boton de abrir y otro que hace que cierre mediante el boton de adentro del modal siendo llamados con las propiedades dentro del window haciendo llamado al evento de presionar-->
+    <script>
+      window.show.addEventListener('click',() => {
+        window.dialog.showModal()
+      })
+      window.hide.addEventListener('click',() => {
+        window.dialog.close()
+      })
+    </script>
+    
+    <main>
+      <!--comentario-->
+      <p>Aprendiendo usar <strong>HTML y CSS</strong> con buenas practicas</p>
+      <h2 id="experiencia">Experiencia</h2>
+      <ul>
+        <li>Sin Experiencia</li>
+      </ul>
+      <!--download hace que se descarge el archivo al este presionar, solo funciona con archivos del proyecto o locales, sin poder descargar el archivo referenciado de otro link fuera-->
+      <a download="" href="/Images/Yo.jpg ">
+        <img
+          height="200"
+          width="200"
+          title="Foto de Gabriel"
+          src="/Images/Yo.jpg"
+          alt="Una fotografica de Gabriel Enriquez Sosa posando"
+        />
+      </a>
+      <!--aside es como una seccion separada de lo principal, como un anexo mas, informacion suplementaria que no es lo principal pero tiene que ver on ello-->
+      <h2 id="proyectos">Proyectos Realizados</h2>
+      <aside>
+        <header>
+          <h3>Mis tecnologias favoritas</h3>
+        </header>
+        <ol type="1" reversed start="5">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Dart</li>
+          <li>Phyton</li>
+        </ol>
+      </aside>
+      <!--el loadin="lazy" hara que la carga del archivo tenga un retardo de ejecucion haciendo que no consuma recursos al instante-->
+      <img style="width: 100%; aspect-ratio: 400/209;" loading="lazy" src="/Images/programming html.jpg" alt="">
+      <!--section es una seccion generica independiente de un documento -->
+      <section>
+        <!--article sirve para agrupar teniendo un significado semantico ya que este contiene una parte como desarrollo, bloque independiente de informacion el cual el contexto sigue siendo el mismo-->
+        <article>
+          <header>
+            <h4>Sitios Webs</h4>
+          </header>
+          <p>Desarrollo de paginas webs realizadas con grandes diseños</p>
+          <!--small sirve para dar como una referencia, incapie o algo de minima importancia, aclaracion corta-->
+          <footer><small>Utilizando HTML,CSS y JavaScript</small></footer>
+        </article>
+      </section>
+
+      <section>
+        <h2>Preguntas frecuentes</h2>
+        <!--details se usa pra los detalles-->
+        <details open>
+          <summary>Qué estudios tienes?</summary>
+          <p>
+            Estudié en la universidad de Técnologico Nacional de México Tuxtepec
+            una Ingeniería de Sistemas Computacionales
+          </p>
+        </details>
+
+        <details>
+          <summary>Cuáles son tus hobbies?</summary>
+          <p>Bailar, Programar y escuchar musica</p>
+        </details>
+
+        <details>
+          <summary>Cuales son tus lenguajes favoritos?</summary>
+          <p>Dart y JavaScript</p>
+        </details>
+      </section>
+
+      <section>
+        <h2>Formulario de contacto</h2>
+        <form action="/" method="post">
+          <!--fielset agrupacion de un formulario-->
+          <fieldset>
+            <legend>Informacion personal</legend>
+            <label style="display: block"
+              >Nombre:
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Gabriel Enriquez Sosa"
+                required
+              />
+            </label>
+            <label
+              >Email:
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="enriquezg411@gmail.com"
+                required
+              />
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Informacion Adicional</legend>
+            <label
+              >Teléfono:
+              <input type="tel" name="tel" placeholder="2871041240" required
+            /></label>
+            <div>
+              <datalist id="languages">
+                <option value="JavaScript"></option>
+                <option value="Java"></option>
+                <option value="C++"></option>
+                <option value="Dart"></option>
+              </datalist>
+              <label>Que lengaje quieres que te ayude?</label>
+              <input list="languages" name="languages" />
+            </div>
+          </fieldset>
+          <input type="submit" value="Enviar Contacto" />
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright; 2023 - El Portafolio de Gabriel</p>
+
+      <!--links especiales-->
+      <a href="mailto:enriquezg411@gmail.com">Enviame un correo</a>
+      <a href="tel:+522871041240">Llamame aqui</a>
+      <a href="whatsapp://send?text=hola gabriel">whatsapp</a>
+    </footer>
+  </body>
+</html>
